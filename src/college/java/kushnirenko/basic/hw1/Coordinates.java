@@ -9,5 +9,6 @@ public class Coordinates {
         System.out.println(" ");
         System.out.println("latitude " + latitude);
         System.out.println("longitude " + longitude);
+        System.out.println("");
     }
 }
