@@ -1,10 +1,10 @@
-package college.java.kushnirenko.basic.practical2;
+package college.java.kushnirenko.basic.practical3;
 
 import javax.imageio.spi.ImageInputStreamSpi;
 import java.text.MessageFormat;
 import java.util.Scanner;
 
-public class PracticalTwo {
+public class Lab3KushnirenkoKn21 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("");
