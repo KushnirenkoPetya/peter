@@ -23,7 +23,7 @@ public class MultiplicityNumber {
                 continue;
             }
             System.out.println("|" + i + "|");
-        }1
+        }
         }
     }
 }

@@ -1,4 +1,4 @@
-package practical2;
+package college.java.kushnirenko.basic.practical2;
 
 public class Lab2KushnirenkoKn21 {
     public static void main(String[] args) {
