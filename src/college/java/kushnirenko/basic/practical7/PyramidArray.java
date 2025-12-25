@@ -1,4 +1,4 @@
-package practical7;
+package college.java.kushnirenko.basic.practical7;
 
 public class PyramidArray {
     public static void main(String[] args) {

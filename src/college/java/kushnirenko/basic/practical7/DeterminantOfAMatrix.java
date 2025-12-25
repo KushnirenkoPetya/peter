@@ -1,4 +1,4 @@
-package practical7;
+package college.java.kushnirenko.basic.practical7;
 
 import java.util.Arrays;
 import java.util.Scanner;
