@@ -29,16 +29,12 @@ public class RockPaperScissors {
             }
         }
     }
-
-    // ===== MAIN MENU =====
     static void showMenu() {
         System.out.println("\n=== MAIN MENU ===");
         System.out.println("1. Start Game");
         System.out.println("2. Exit");
         System.out.print("Choose an option: ");
     }
-
-    // ===== GAME SCENE =====
     static void startGame() {
         boolean playing = true;
 
@@ -73,7 +69,6 @@ public class RockPaperScissors {
         }
     }
 
-    // ===== GAME LOGIC =====
     static String getResult(int user, int computer) {
         if (user == computer) {
             return "Draw";
@@ -87,8 +82,6 @@ public class RockPaperScissors {
 
         return "You lose!";
     }
-
-    // ===== SAFE INPUT =====
     static int getIntInput() {
         while (!scanner.hasNextInt()) {
             scanner.next();
