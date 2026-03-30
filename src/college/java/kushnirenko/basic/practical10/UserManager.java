@@ -1,4 +1,4 @@
-package practical10;
+package college.java.kushnirenko.basic.practical10;
 
 public class UserManager {
     private User[] users = new User[15];

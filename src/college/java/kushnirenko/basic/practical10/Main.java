@@ -1,4 +1,4 @@
-package practical10;
+package college.java.kushnirenko.basic.practical10;
 
 import java.util.Scanner;
 
