@@ -4,7 +4,7 @@ public class Lab2KushnirenkoKn21 {
     public static void main(String[] args) {
         System.out.println("Information about primitive data types:");
         System.out.println("");
-        System.out.println("byte   - size: " + Byte.BYTES + " bytes, min: " + Byte.MIN_VALUE +
+        System.out.println("byte - size: " + Byte.BYTES + " bytes, min: " + Byte.MIN_VALUE +
                 ", max: " + Byte.MAX_VALUE);
         System.out.println("short  - size: " + Short.BYTES + " bytes, min: " + Short.MIN_VALUE +
                 ", max: " + Short.MAX_VALUE);

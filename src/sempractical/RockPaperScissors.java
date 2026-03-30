@@ -60,6 +60,14 @@ public class RockPaperScissors {
             }
 
             if (startGame) {
+                // === ВЫВОД ПРАВИЛ ===
+                System.out.println("\n=== ПРАВИЛА ГРИ ROCK-PAPER-SCISSORS ===");
+                System.out.println("1. Камінь (Rock) б'є ножиці (Scissors)");
+                System.out.println("2. Ножиці (Scissors) ріжуть папір (Paper)");
+                System.out.println("3. Папір (Paper) накриває камінь (Rock)");
+                System.out.println("4. Якщо обидва вибрали одне і те ж, нічия");
+                System.out.println("============================\n");
+
                 for (int i = 1; i <= rounds; i++) {
                     System.out.println("\nРаунд " + i);
                     System.out.println("0 - Rock | 1 - Paper | 2 - Scissors");
@@ -99,11 +107,8 @@ public class RockPaperScissors {
         }
         return sc.nextInt();
     }
-
     static String getResult(int user, int computer) {
         if (user == computer) return "Draw";
         return ((user - computer + 3) % 3 == 1) ? "You win!" : "You lose!";
     }
 }
-
-
