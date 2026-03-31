@@ -1,4 +1,4 @@
-package sempractical2;
+package sempractical.sempractical3.sempractical2;
 
 import java.util.Random;
 

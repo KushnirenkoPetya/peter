@@ -1,4 +1,4 @@
-package sempractical3;
+package sempractical.sempractical3;
 
 import java.util.Scanner;
 
