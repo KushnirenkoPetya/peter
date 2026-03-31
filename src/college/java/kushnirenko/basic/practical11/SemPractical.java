@@ -1,4 +1,4 @@
-package practical11;
+package college.java.kushnirenko.basic.practical11;
 
 import java.util.Random;
 import java.util.Scanner;
