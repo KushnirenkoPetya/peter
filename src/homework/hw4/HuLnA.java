@@ -1,8 +1,8 @@
-package sempractical.sempractical3;
+package homework.hw4;
 
 import java.util.Scanner;
 
-public class HfKd {
+public class HuLnA {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Введите ваш возраст:");

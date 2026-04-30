@@ -1,8 +1,8 @@
-package sempractical.sempractical3.sempractical2;
+package homework.hw3;
 
 import java.util.Random;
 
-public class HmW {
+public class LigaChamp {
     public static void main (String[] args) {
         System.out.println("\t\tЛига Чемпионов");
         System.out.println("Барселона");
@@ -24,4 +24,3 @@ public class HmW {
 
     }
 }
-

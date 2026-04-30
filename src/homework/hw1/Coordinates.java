@@ -1,4 +1,4 @@
-package college.java.kushnirenko.basic.hw1;
+package homework.hw1;
 
 public class Coordinates {
     public static void main(String[] args) {

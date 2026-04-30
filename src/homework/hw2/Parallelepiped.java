@@ -1,4 +1,4 @@
-package college.java.kushnirenko.basic.hw2;
+package homework.hw2;
 
 public class Parallelepiped {
     public static void main(String[] args){

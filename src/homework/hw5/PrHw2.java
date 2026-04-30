@@ -1,8 +1,8 @@
-package sempractical.sempractical3;
+package homework.hw5;
 
 import java.util.Scanner;
 
-public class GhHv {
+public class PrHw2 {
     public static void main(String[] args) {
 
         System.out.println("Information about primitive data types");
