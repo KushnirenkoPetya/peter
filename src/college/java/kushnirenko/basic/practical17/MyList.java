@@ -10,6 +10,7 @@ public class MyList {
         data = new int[DEFAULT_CAPACITY];
         size = 0;
     }
+
     private void ensureCapacity() {
         if (size >= data.length) {
             int newCapacity = data.length * 2;
@@ -19,15 +20,15 @@ public class MyList {
             data = newData;
         }
     }
+
     public void add(int value) {
         ensureCapacity();
         data[size++] = value;
     }
 
-
     public void add(int index, int value) {
         if (index < 0 || index > size)
-            throw new IndexOutOfBoundsException("Invalid index");
+            throw new IndexOutOfBoundsException("Невірний індекс");
 
         ensureCapacity();
 
@@ -39,10 +40,9 @@ public class MyList {
         size++;
     }
 
-
     public void remove(int index) {
         if (index < 0 || index >= size)
-            throw new IndexOutOfBoundsException("Invalid index");
+            throw new IndexOutOfBoundsException("Невірний індекс");
 
         for (int i = index; i < size - 1; i++) {
             data[i] = data[i + 1];
@@ -54,21 +54,26 @@ public class MyList {
 
     public int get(int index) {
         if (index < 0 || index >= size)
-            throw new IndexOutOfBoundsException("Invalid index");
+            throw new IndexOutOfBoundsException("Невірний індекс");
 
         return data[index];
     }
+
     public int size() {
         return size;
     }
+
     public int capacity() {
         return data.length;
     }
+
     public void print() {
         if (size == 0) {
-            System.out.println("Empty");
+            System.out.println("Список порожній");
             return;
         }
+
+        System.out.print("Список: ");
         for (int i = 0; i < size; i++) {
             System.out.print(data[i] + " ");
         }
