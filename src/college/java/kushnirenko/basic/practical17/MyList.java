@@ -1,82 +1,64 @@
 package college.java.kushnirenko.basic.practical17;
 
 public class MyList {
-    private int[] data;
-    private int size;
-
-    private static final int DEFAULT_CAPACITY = 10;
+    private String[] elementData;
+    private int size = 0;
 
     public MyList() {
-        data = new int[DEFAULT_CAPACITY];
-        size = 0;
+        this.elementData = new String[10];
     }
 
-    private void ensureCapacity() {
-        if (size >= data.length) {
-            int newCapacity = data.length * 2;
-            int[] newData = new int[newCapacity];
-
-            System.arraycopy(data, 0, newData, 0, size);
-            data = newData;
+    public void add(String element) {
+        if (size == elementData.length) {
+            grow();
         }
+        elementData[size] = element;
+        size++;
     }
 
-    public void add(int value) {
-        ensureCapacity();
-        data[size++] = value;
-    }
+    public void add(int index, String element) {
+        if (index < 0 || index > size) return;
 
-    public void add(int index, int value) {
-        if (index < 0 || index > size)
-            throw new IndexOutOfBoundsException("Невірний індекс");
-
-        ensureCapacity();
-
-        for (int i = size; i > index; i--) {
-            data[i] = data[i - 1];
+        if (size == elementData.length) {
+            grow();
         }
 
-        data[index] = value;
+        System.arraycopy(elementData, index, elementData, index + 1, size - index);
+
+        elementData[index] = element;
         size++;
     }
 
     public void remove(int index) {
-        if (index < 0 || index >= size)
-            throw new IndexOutOfBoundsException("Невірний індекс");
+        if (index < 0 || index >= size) return;
 
-        for (int i = index; i < size - 1; i++) {
-            data[i] = data[i + 1];
+        int numMoved = size - index - 1;
+        if (numMoved > 0) {
+            System.arraycopy(elementData, index + 1, elementData, index, numMoved);
         }
 
         size--;
-        data[size] = 0;
+        elementData[size] = null;
     }
 
-    public int get(int index) {
-        if (index < 0 || index >= size)
-            throw new IndexOutOfBoundsException("Невірний індекс");
-
-        return data[index];
+    public void removeLast() {
+        if (size > 0) {
+            size--;
+            elementData[size] = null;
+        }
     }
 
-    public int size() {
+    public int getSize() {
         return size;
     }
 
-    public int capacity() {
-        return data.length;
+    public int getCapacity() {
+        return elementData.length;
     }
 
-    public void print() {
-        if (size == 0) {
-            System.out.println("Список порожній");
-            return;
-        }
-
-        System.out.print("Список: ");
-        for (int i = 0; i < size; i++) {
-            System.out.print(data[i] + " ");
-        }
-        System.out.println();
+    private void grow() {
+        String[] newArray = new String[elementData.length + 1];
+        System.arraycopy(elementData, 0, newArray, 0, elementData.length);
+        elementData = newArray;
     }
 }
