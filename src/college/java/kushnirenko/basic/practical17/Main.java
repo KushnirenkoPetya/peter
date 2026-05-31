@@ -1,31 +1,105 @@
 package college.java.kushnirenko.basic.practical17;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        MyList list = new MyList();
+        Scanner scanner = new Scanner(System.in);
 
+        CustomList<String> list = new CustomList<>();
 
-        list.add("Apple");
-        list.add("Banana");
-        list.add("Orange");
+        while (true) {
 
-        list.add(1, "Mango");
+            System.out.println("\n===== MENU =====");
+            System.out.println("1 - Додати елемент в кінець");
+            System.out.println("2 - Додати елемент за індексом");
+            System.out.println("3 - Видалити елемент");
+            System.out.println("4 - Отримати елемент");
+            System.out.println("5 - Кількість елементів");
+            System.out.println("6 - Кількість елементів у буфері");
+            System.out.println("7 - Показати список");
+            System.out.println("0 - Вихід");
 
-        System.out.println("Список:");
+            int choice = scanner.nextInt();
+            scanner.nextLine();
 
-        for (int i = 0; i < list.getSize(); i++) {
-            System.out.println(i + ": " + list.get(i));
+            try {
+
+                switch (choice) {
+
+                    case 1:
+
+                        System.out.print("Введіть елемент: ");
+                        String value = scanner.nextLine();
+
+                        list.add(value);
+
+                        System.out.println("Елемент додано");
+                        break;
+
+                    case 2:
+
+                        System.out.print("Введіть індекс: ");
+                        int index = scanner.nextInt();
+                        scanner.nextLine();
+
+                        System.out.print("Введіть елемент: ");
+                        String element = scanner.nextLine();
+
+                        list.add(index, element);
+
+                        System.out.println("Елемент додано");
+                        break;
+
+                    case 3:
+
+                        System.out.print("Введіть індекс: ");
+                        int removeIndex = scanner.nextInt();
+
+                        String removed = list.remove(removeIndex);
+
+                        System.out.println("Видалено: " + removed);
+                        break;
+
+                    case 4:
+
+                        System.out.print("Введіть індекс: ");
+                        int getIndex = scanner.nextInt();
+
+                        System.out.println("Елемент: " + list.get(getIndex));
+                        break;
+
+                    case 5:
+
+                        System.out.println("Кількість елементів: " + list.size());
+                        break;
+
+                    case 6:
+
+                        System.out.println("Кількість елементів у буфері: " + list.capacity());
+                        break;
+
+                    case 7:
+
+                        list.printList();
+                        break;
+
+                    case 0:
+
+                        System.out.println("Програма завершена");
+                        return;
+
+                    default:
+
+                        System.out.println("Невірний пункт меню");
+                }
+
+            } catch (Exception e) {
+
+                System.out.println("Помилка: " + e.getMessage());
+            }
         }
-
-        list.remove(2);
-        System.out.println("\nПісля видалення:");
-
-        for (int i = 0; i < list.getSize(); i++) {
-            System.out.println(i + ": " + list.get(i));
-        }
-        System.out.println("\nКількість елементів: " + list.getSize());
-        System.out.println("Розмір буфера: " + list.getCapacity());
     }
 }
